@@ -1,6 +1,6 @@
 # GitHub Migration Dashboard
 
-This app will show a GitHub Migration dashboard for the selected organization.
+This app will show a Repository Migrations dashboard for GitHub Cloud migrations when using the [GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/understanding-github-enterprise-importer/about-github-enterprise-importer) CLI
 
 ![](./docs/images/dashboard.png)
 
