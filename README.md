@@ -1,6 +1,20 @@
 # GitHub Migration Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app will show a GitHub Migration dashboard for the selected organization.
+
+![](./docs/images/dashboard.png)
+
+## Configuration
+
+Set the environment variables in the `.env` before running
+
+```
+REACT_APP_GITHUB_PAT=""
+REACT_APP_GITHUB_ENTERPRISE_NAME=""
+```
+
+Note: `REACT_APP_GITHUB_PAT` must have permission to the Organization and must be already SSO approved if SSO is activated.
+
 
 ## Start App
 
