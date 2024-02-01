@@ -131,17 +131,19 @@ function OrgList() {
         <table>
           <thead>
             <tr>
-              <th>Repository Name</th>
-              <th>Created At</th>
-              <th>State</th>
+              <th style={{ textAlign: 'left' }} >Repository Name</th>
+              <th style={{ textAlign: 'left' }} >Created At</th>
+              <th style={{ textAlign: 'left', padding: '0 15px' }} >State</th>
+              {migrationState === 'FAILED' && <th style={{ textAlign: 'left', padding: '0 15px' }} >Failure Reason</th>}
             </tr>
           </thead>
           <tbody>
-            {migrationData && migrationData.node.repositoryMigrations.nodes.map(({ id, repositoryName, createdAt, state }) => (
+            {migrationData && migrationData.node.repositoryMigrations.nodes.map(({ id, repositoryName, createdAt, state, failureReason }) => (
               <tr key={id}>
                 <td>{repositoryName}</td>
                 <td>{formatDate(createdAt)}</td>
-                <td>{state}</td>
+                <td style={{ padding: '0 15px' }} >{state}</td>
+                {migrationState === 'FAILED' && <td style={{ padding: '0 15px' }} >{failureReason}</td>}
               </tr>
             ))}
           </tbody>
